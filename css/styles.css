@@ -217,8 +217,7 @@ body {
   color: var(--primary-text-color-theme-light);
   margin-bottom: 40px;
 }
-.modal-open-btn,
-.modal-form-submit {
+.modal-open-btn {
   width: 216px;
   height: 50px;
   background-color: #2196f3;
@@ -532,6 +531,56 @@ body {
   display: flex;
   align-items: baseline;
 }
+.footer-icons {
+  margin-right: 93px;
+}
+.subscribe-title {
+  font-family: var(--primary-font);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--primary-text-color-theme-light);
+  margin-bottom: 20px;
+}
+.subscribe-form-input-wrapper{
+  display: flex;
+}
+.subscribe-form-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  margin-right: 12px;
+  background-color: var(--no-name-text-color);
+  color: #ffffff;
+}
+.subscribe-form-submit{
+  width: 216px;
+  height: 50px;
+  background-color: #2196f3;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color-theme-light);
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+}
+
+.subscribe-form-submit-icon{
+  margin-left: 10px;
+  align-items: center;
+  fill: var(--primary-text-color-theme-light);
+}
+
 /* Portfolio */
 .filther-btn {
   display: flex;
@@ -657,8 +706,8 @@ body {
 /* modal-window */
 .modal {
   position: absolute;
-  height: 528px;
-  width: 581px;
+  height: 581px;
+  width: 528px;
   background-color: var(--primary-text-color-theme-light);
   top: 50%;
   left: 50%;
@@ -679,6 +728,13 @@ body {
   background-color: transparent;
   padding: 0;
 }
+.modal-close-icon {
+  transition-duration: var(--time-activate);
+  transition-timing-function: var(--funk-time);
+}
+.modal-close-btn:hover .modal-close-icon {
+  fill: var(--accent-color);
+}
 /* Modal Form */
 .modal-form-title {
   font-family: var(--primary-font);
@@ -687,6 +743,7 @@ body {
   line-height: 1.15;
   text-align: center;
   color: var(--primary-text-dark-color);
+  margin-bottom: 12px;
 }
 .modal-form {
   display: flex;
@@ -733,6 +790,9 @@ body {
   border-color: var(--accent-color);
   outline: none;
 }
+.modal-form-name {
+  margin-bottom: 20px;
+}
 .modal-form-message {
   width: 100%;
   height: 120px;
@@ -754,4 +814,73 @@ body {
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.modal-form-check-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--second-icon-color);
+}
+.check-box-policy {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+.modal-form-own-checkbox {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 9px;
+}
+.modal-form-check {
+  position: absolute;
+  appearance: none;
+}
+.modal-form-own-checkbox-icon {
+  display: none;
+  fill: var(--primary-text-color-theme-light);
+}
+.modal-form-check:checked + .modal-form-own-checkbox {
+  background-color: var(--accent-color);
+}
+.modal-form-check:checked
+  + .modal-form-own-checkbox
+  .modal-form-own-checkbox-icon {
+  display: block;
+}
+.modal-form-check:focus + .modal-form-own-checkbox {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 1);
+}
+.modal-form-submit {
+  width: 216px;
+  height: 50px;
+  background-color: #2196f3;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.06em;
+  align-self: center;
+  color: var(--primary-text-color-theme-light);
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: var(--time-activate);
+  transition-timing-function: var(--funk-time);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+  background-color: #188ce8;
 }
